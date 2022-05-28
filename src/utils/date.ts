@@ -1,5 +1,8 @@
-export const getCurrentDay = (date = new Date()): string => {
-  const today = new Date(date.getTime());
+const formatDate = (date: Date): string =>
+  `${date.getFullYear()}-${'0' + (+date.getMonth() + 1)}-${date.getDate()}`;
+
+export const getCurrentDay = (): string => {
+  const today = new Date();
 
   return formatDate(today);
 };
@@ -10,5 +13,3 @@ export const getPreviousDay = (date = new Date()): string => {
 
   return formatDate(previous);
 };
-
-const formatDate = (date: Date): string => date.toISOString().split('T')[0];
