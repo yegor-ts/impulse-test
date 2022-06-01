@@ -16,19 +16,19 @@ export class Installs {
   @Column('varchar', { length: 100, unique: true })
   app_name: string;
 
-  @Column('varchar', { length: 100, unique: true })
+  @Column('varchar', { length: 100 })
   city: string;
 
-  @Column('varchar', { length: 100, unique: true })
+  @Column('varchar', { length: 100 })
   device_model: string;
 
-  @Column({ type: 'date', unique: true })
+  @Column({ type: 'date' })
   install_time: Date;
 
-  @Column({ type: 'date', unique: true })
+  @Column({ type: 'date' })
   date: Date;
 
-  @Column('varchar', { length: 20, unique: true })
+  @Column('varchar', { length: 20 })
   att: string;
 
   @Column({ type: 'boolean' })

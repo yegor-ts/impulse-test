@@ -26,29 +26,24 @@ export class InstallMigration1653392356822 implements MigrationInterface {
             name: 'city',
             type: 'varchar',
             length: '100',
-            isUnique: true,
           },
           {
             name: 'device_model',
             type: 'varchar',
             length: '100',
-            isUnique: true,
           },
           {
             name: 'install_time',
             type: 'date',
-            isUnique: true,
           },
           {
             name: 'date',
             type: 'date',
-            isUnique: true,
           },
           {
             name: 'att',
             type: 'varchar',
             length: '20',
-            isUnique: true,
           },
           {
             name: 'is_lat',
