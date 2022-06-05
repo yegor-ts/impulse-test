@@ -34,8 +34,10 @@ export class AppsflyerApiService {
   fetchData(): void {
     const from = getPreviousDay();
     const to = getCurrentDay();
+    const additionalField = 'additional_fields=device_model';
 
-    const requestUrl = `${this.baseUrl}&from=${from}&to=${to}`;
+    const requestUrl =
+      `${this.baseUrl}&from=${from}&to=${to}` + additionalField;
 
     this.httpService.axiosRef
       .get(requestUrl)
